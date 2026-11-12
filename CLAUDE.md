@@ -34,7 +34,7 @@ If an item could be a chore or a decision, treat it as a decision. If an item ha
 
 ## Standing chores (every run, even if nobody mentions them)
 
-- **Sprint label sync:** every ticket in the FO current sprint must have the matching `Sprint_<number>` label, and every ticket with the current `Sprint_<number>` label must be in that sprint. Ask `jira-ops` to fix any mismatch. Edward's answer here is always yes, so never ask him.
+- **Sprint label sync:** every ticket in the FO current sprint must have the matching `Sprint_<number>` label, and every ticket with the current `Sprint_<number>` label must be in that sprint. A ticket in the sprint that is missing the label: ask `jira-ops` to add it. Edward's answer here is always yes, so never ask him. A ticket with the label that is not in the sprint: do not move it. Put it under Decide, because moving a ticket into a sprint is a planning call.
 
 ## Daily brief format
 
@@ -62,6 +62,6 @@ Put Decide first, then Do. If a pile is empty, write "None".
 
 When Edward corrects a result, add one line here with the date and the rule, so the next run does not repeat it.
 
-- 2026-11-12: Sprint label mismatches are a standing chore. Never ask Edward about them.
+- 2026-11-12: Adding a missing Sprint label is a standing chore. Never ask Edward about it. Moving a ticket into the sprint still goes to Decide.
 - 2026-11-12: Split Needs Edward into Decide and Do.
 - 2026-11-12: Do not draft a ticket while its core decisions are still open. Put it in Decide instead.
