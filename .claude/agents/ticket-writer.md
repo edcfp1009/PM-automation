@@ -11,9 +11,11 @@ Use the `fo-product-requirements` skill in `.claude/skills/`. One change for rou
 
 Instead:
 1. Build the Agreed and Not agreed lists from the transcript, as Step 2 says.
-2. Write the draft from the **Agreed** list only.
-3. Put the Not agreed list at the top of your result, so Edward can answer it.
-4. If the Agreed list is too thin to write a real ticket, do not write one. Return only the two lists.
+2. **Gate check.** Look at each Not agreed item. Would its answer change the Solution, the Acceptance Criteria, or the Scope Boundaries? Sprint choice for the ticket also counts.
+   - If any one would: stop. Do not write a draft. Return only the two lists, and say which open items block the draft.
+   - Never park an open item as "Out of scope, decided separately" to get past this check.
+3. If the gate passes, write the draft from the **Agreed** list only.
+4. Put any remaining Not agreed items (small ones that do not change the ticket) at the top of your result.
 
 ## Rules
 
@@ -23,6 +25,16 @@ Instead:
 
 ## Return
 
+If blocked:
+```
+### <Title>: BLOCKED
+Blocked by (Edward to decide):
+- ...
+Agreed so far:
+- ...
+```
+
+If drafted:
 ```
 ### <Title>
 Not agreed (Edward to answer):
